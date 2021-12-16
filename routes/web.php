@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Route::get('/time', function (){
     return view('index');
 });
@@ -34,4 +37,30 @@ Route::get('/{timezone?}', function ($timezone = null) {
         echo 'Múi giờ bạn chọn ' . $timezone . ' hiện tại đang là: ' . $time->format('d-m-Y H:i:s');
     }
     return view('index');
+});
+
+
+
+Route::prefix('customer')->group(function () {
+    Route::get('index', function () {
+        return view('customer.index');
+    });
+    Route::get('create',function (){
+
+    });
+    Route::post('store', function () {
+
+    });
+    Route::get('{id}/show', function () {
+
+    });
+    Route::get('{id}/edit', function () {
+
+    });
+    Route::patch('{id}/update', function () {
+
+    });
+    Route::delete('{id}', function () {
+
+    });
 });
