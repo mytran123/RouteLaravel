@@ -8,59 +8,45 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Danh sách khách hàng</h1>
+<h1>Danh sách task</h1>
 <table border="1px">
     <thead>
     <tr>
         <th>STT</th>
-        <th>Họ và tên</th>
-        <th>Số điện thoại</th>
-        <th>Email</th>
+        <th>Tên task</th>
+        <th>Mô tả</th>
         <th>Thao tác</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td>1</td>
-        <td>Nguyễn Văn A</td>
-        <td>01234567890</td>
-        <td>email.test@mail.com</td>
+        <td>Mua hàng</td>
+        <td>Các đơn hàng</td>
         <td>
             <a href="#">Xem</a> | <a href="#">Sửa</a> | <a href="#">Xóa</a>
         </td>
     </tr>
     <tr>
         <td>2</td>
-        <td>Nguyễn Văn B</td>
-        <td>01234567890</td>
-        <td>email.test@mail.com</td>
+        <td>Hóa đơn</td>
+        <td>Hóa đơn thanh toán</td>
         <td>
             <a href="#">Xem</a> | <a href="#">Sửa</a> | <a href="#">Xóa</a>
         </td>
     </tr>
     <tr>
         <td>3</td>
-        <td>Nguyễn Văn C</td>
-        <td>01234567890</td>
-        <td>email.test@mail.com</td>
+        <td>Sản phẩm</td>
+        <td>Số lượng sản phẩm</td>
         <td>
             <a href="#">Xem</a> | <a href="#">Sửa</a> | <a href="#">Xóa</a>
         </td>
     </tr>
     <tr>
         <td>4</td>
-        <td>Nguyễn Văn D</td>
-        <td>01234567890</td>
-        <td>email.test@mail.com</td>
-        <td>
-            <a href="#">Xem</a> | <a href="#">Sửa</a> | <a href="#">Xóa</a>
-        </td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>Nguyễn Văn E</td>
-        <td>01234567890</td>
-        <td>email.test@mail.com</td>
+        <td>Giá</td>
+        <td>Đơn giá</td>
         <td>
             <a href="#">Xem</a> | <a href="#">Sửa</a> | <a href="#">Xóa</a>
         </td>

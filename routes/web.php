@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,25 +44,36 @@ Route::get('/{timezone?}', function ($timezone = null) {
 
 
 Route::prefix('customer')->group(function () {
-    Route::get('index', function () {
-        return view('customer.index');
-    });
-    Route::get('create',function (){
+    Route::get('/index', [CustomerController::class,"index"]);
+
+    Route::get('/create',function (){
 
     });
-    Route::post('store', function () {
+    Route::post('/store', function () {
 
     });
-    Route::get('{id}/show', function () {
+    Route::get('/{id}/show', function () {
 
     });
-    Route::get('{id}/edit', function () {
+    Route::get('/{id}/edit', function () {
 
     });
-    Route::patch('{id}/update', function () {
+    Route::patch('/{id}/update', function () {
 
     });
-    Route::delete('{id}', function () {
+    Route::delete('/{id}/delete', function () {
 
     });
 });
+
+
+Route::prefix('/tasks')->group(function () {
+    Route::get('/index',[TaskController::class,"index"])->name("tasks.index");
+    Route::get('/create',[TaskController::class,"create"])->name("tasks.create");
+    Route::post('/create',[TaskController::class,"store"])->name("tasks.store");
+    Route::get('/{id}/detail',[TaskController::class,"show"])->name("tasks.detail");
+    Route::get('/{id}/edit',[TaskController::class,"edit"])->name("tasks.edit");
+    Route::post('/{id}/update',[TaskController::class,"update"])->name("tasks.update");
+    Route::get('/{id}/delete',[TaskController::class,"destroy"])->name("tasks.destroy");
+});
+
