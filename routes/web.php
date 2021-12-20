@@ -44,7 +44,7 @@ Route::get('/{timezone?}', function ($timezone = null) {
 
 
 Route::prefix('customer')->group(function () {
-    Route::get('/index', [CustomerController::class,"index"]);
+    Route::get('/index2', [CustomerController::class,"index2"]);
 
     Route::get('/create',function (){
 
@@ -77,3 +77,6 @@ Route::prefix('/tasks')->group(function () {
     Route::get('/{id}/delete',[TaskController::class,"destroy"])->name("tasks.destroy");
 });
 
+Route::group(['prefix' => 'customers'], function () {
+    Route::get('/index',[CustomerController::class, 'index'])->name('customers.index');
+});
